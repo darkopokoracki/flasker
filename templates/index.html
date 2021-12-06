@@ -1,0 +1,21 @@
+<h1>Darko Pokoracki!</h1>
+
+<p>This is my first webpage!</p>
+
+<p>My name is {{ first_name }}</p>
+
+<p>{{ stuff | safe }}</p>
+
+
+{% for pizza in favourite_pizza %}
+    {% if pizza == 'Mexico' %}
+        <h3>{{ pizza | upper }}</h3>
+    {% else %}
+        <h3>{{ pizza }}</h3>
+    {% endif %}
+{% endfor %}
+
+
+<br>
+{{ favourite_pizza[0] }}
+
