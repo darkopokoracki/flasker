@@ -1,21 +1,24 @@
-<h1>Darko Pokoracki!</h1>
+{% extends 'base.html' %}
 
-<p>This is my first webpage!</p>
+{% block content %}
+    <h1>Darko Pokoracki!</h1>
 
-<p>My name is {{ first_name }}</p>
+    <p>This is my first webpage!</p>
 
-<p>{{ stuff | safe }}</p>
+    <p>My name is {{ first_name }}</p>
 
-
-{% for pizza in favourite_pizza %}
-    {% if pizza == 'Mexico' %}
-        <h3>{{ pizza | upper }}</h3>
-    {% else %}
-        <h3>{{ pizza }}</h3>
-    {% endif %}
-{% endfor %}
+    <p>{{ stuff | safe }}</p>
 
 
-<br>
-{{ favourite_pizza[0] }}
+    {% for pizza in favourite_pizza %}
+        {% if pizza == 'Mexico' %}
+            <h3>{{ pizza | upper }}</h3>
+        {% else %}
+            <h3>{{ pizza }}</h3>
+        {% endif %}
+    {% endfor %}
+
+    <br>
+    
+{% endblock %}
 
